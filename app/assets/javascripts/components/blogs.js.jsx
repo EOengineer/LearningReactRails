@@ -9,15 +9,19 @@ var Blogs = React.createClass({
       <div>
         <h1> All Blogs </h1>
 
-        {this.props.blogs.map(function(result, i) {
-          return (
-            <div key={i}>
-              <p key={"title" + i}>{result.title}</p>
-              <p key={"body" + i}>{result.body}</p>
-            </div>
-          );
-        })}
-
+        <div className="blogswrapper">
+          {this.props.blogs.map(function(result, i) {
+            return (
+              <a href={"/blogs/" + result.id}>
+                <div className="blog" key={i}>
+                  <p key={"t" + i}>{result.title}</p>
+                  <p key={"b" + i}>{result.body}</p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+        <a href="/blogs/new" className="stuff">New Blog</a>
       </div>
     );
   }
