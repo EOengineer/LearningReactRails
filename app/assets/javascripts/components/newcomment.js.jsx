@@ -1,7 +1,8 @@
 var NewComment = React.createClass({
   propTypes: {
     blog_id: React.PropTypes.string,
-    url: React.PropTypes.string
+    url: React.PropTypes.string,
+    csrf_token: React.PropTypes.string
   },
 
   render: function() {
