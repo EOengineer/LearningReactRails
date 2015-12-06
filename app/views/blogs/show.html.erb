@@ -2,4 +2,6 @@
 
 <%= react_component('Blog', id: @blog.id, title: @blog.title, body: @blog.body) %>
 
+<%= react_component('Comments', comments: @blog.comments) %>
 
+<%= react_component('NewComment', blog_id: @blog.id, action: "/comments") %>

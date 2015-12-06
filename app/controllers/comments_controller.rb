@@ -64,11 +64,11 @@ class CommentsController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_params
-      params.require(:blog).permit(:body, :blog_id)
+    def comment_params
+      params.require(:comment).permit(:body, :blog_id)
     end
 
-    def :set_parent_blog
+    def set_parent_blog
       @blog = Blog.find(params[:blog_id])
     end
 end
