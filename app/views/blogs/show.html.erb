@@ -4,4 +4,4 @@
 
 <%= react_component('Comments', comments: @blog.comments) %>
 
-<%= react_component('NewComment', blog_id: @blog.id, action: "/comments") %>
+<%= react_component('NewComment', blog_id: @blog.id, path: blog_comments_path(@blog), token: form_authenticity_token) %>
